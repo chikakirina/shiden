@@ -9,19 +9,39 @@
 /* Begin PBXBuildFile section */
 		0712D8581DAFACA2000953B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712D8571DAFACA2000953B0 /* AppDelegate.swift */; };
 		0712D85A1DAFACA2000953B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712D8591DAFACA2000953B0 /* ViewController.swift */; };
-		0712D85D1DAFACA2000953B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0712D85B1DAFACA2000953B0 /* Main.storyboard */; };
+		0712D85D1DAFACA2000953B0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0712D85B1DAFACA2000953B0 /* Home.storyboard */; };
 		0712D85F1DAFACA2000953B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0712D85E1DAFACA2000953B0 /* Assets.xcassets */; };
 		0712D8621DAFACA2000953B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0712D8601DAFACA2000953B0 /* LaunchScreen.storyboard */; };
+		0712D86A1DAFB114000953B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712D8691DAFB114000953B0 /* HomeViewController.swift */; };
+		0712D8701DAFC0B3000953B0 /* mana.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712D86F1DAFC0B3000953B0 /* mana.png */; };
+		0712D8721DAFC625000953B0 /* HistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712D8711DAFC625000953B0 /* HistoryCellViewModel.swift */; };
+		0712D8741DAFC8E2000953B0 /* HistoryShoppingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712D8731DAFC8E2000953B0 /* HistoryShoppingCell.swift */; };
+		0712D8761DAFCC5B000953B0 /* Int+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712D8751DAFCC5B000953B0 /* Int+Utility.swift */; };
+		07EBC8B61DB077A800C29348 /* HistorySavingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBC8B51DB077A800C29348 /* HistorySavingCell.swift */; };
+		07EBC8B81DB078CE00C29348 /* HistoryDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBC8B71DB078CE00C29348 /* HistoryDateCell.swift */; };
+		07EBC8BA1DB0796D00C29348 /* DateFormatter+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBC8B91DB0796D00C29348 /* DateFormatter+Utility.swift */; };
+		7692E697B7838F6146BF0951 /* Pods_Sumire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0712D8541DAFACA2000953B0 /* Sumire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sumire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0712D8571DAFACA2000953B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0712D8591DAFACA2000953B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0712D85C1DAFACA2000953B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0712D85C1DAFACA2000953B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		0712D85E1DAFACA2000953B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0712D8611DAFACA2000953B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0712D8631DAFACA2000953B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0712D8691DAFB114000953B0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0712D86F1DAFC0B3000953B0 /* mana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana.png; sourceTree = "<group>"; };
+		0712D8711DAFC625000953B0 /* HistoryCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellViewModel.swift; sourceTree = "<group>"; };
+		0712D8731DAFC8E2000953B0 /* HistoryShoppingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryShoppingCell.swift; sourceTree = "<group>"; };
+		0712D8751DAFCC5B000953B0 /* Int+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Utility.swift"; sourceTree = "<group>"; };
+		07EBC8B51DB077A800C29348 /* HistorySavingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySavingCell.swift; sourceTree = "<group>"; };
+		07EBC8B71DB078CE00C29348 /* HistoryDateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDateCell.swift; sourceTree = "<group>"; };
+		07EBC8B91DB0796D00C29348 /* DateFormatter+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Utility.swift"; sourceTree = "<group>"; };
+		355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sumire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CFE45D97FE0945BC425A4A6 /* Pods-Sumire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.release.xcconfig"; sourceTree = "<group>"; };
+		F672BC6891D167EDB7F8E5A0 /* Pods-Sumire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7692E697B7838F6146BF0951 /* Pods_Sumire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,8 @@
 			children = (
 				0712D8561DAFACA2000953B0 /* Sumire */,
 				0712D8551DAFACA2000953B0 /* Products */,
+				0A0C3975A43C365A3F7060D2 /* Pods */,
+				5D4E26946866E3C6FAE0706F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +79,45 @@
 			children = (
 				0712D8571DAFACA2000953B0 /* AppDelegate.swift */,
 				0712D8591DAFACA2000953B0 /* ViewController.swift */,
-				0712D85B1DAFACA2000953B0 /* Main.storyboard */,
+				0712D8691DAFB114000953B0 /* HomeViewController.swift */,
+				0712D85B1DAFACA2000953B0 /* Home.storyboard */,
+				0712D8751DAFCC5B000953B0 /* Int+Utility.swift */,
+				07EBC8B91DB0796D00C29348 /* DateFormatter+Utility.swift */,
+				07EBC8B71DB078CE00C29348 /* HistoryDateCell.swift */,
+				0712D8731DAFC8E2000953B0 /* HistoryShoppingCell.swift */,
+				07EBC8B51DB077A800C29348 /* HistorySavingCell.swift */,
+				0712D8711DAFC625000953B0 /* HistoryCellViewModel.swift */,
 				0712D85E1DAFACA2000953B0 /* Assets.xcassets */,
+				0712D86E1DAFC0B3000953B0 /* Resources */,
 				0712D8601DAFACA2000953B0 /* LaunchScreen.storyboard */,
 				0712D8631DAFACA2000953B0 /* Info.plist */,
 			);
 			path = Sumire;
+			sourceTree = "<group>";
+		};
+		0712D86E1DAFC0B3000953B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0712D86F1DAFC0B3000953B0 /* mana.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0A0C3975A43C365A3F7060D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F672BC6891D167EDB7F8E5A0 /* Pods-Sumire.debug.xcconfig */,
+				7CFE45D97FE0945BC425A4A6 /* Pods-Sumire.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5D4E26946866E3C6FAE0706F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0712D8661DAFACA2000953B0 /* Build configuration list for PBXNativeTarget "Sumire" */;
 			buildPhases = (
+				0D91D955156973A777BCADD1 /* [CP] Check Pods Manifest.lock */,
+				0712D86B1DAFB20F000953B0 /* Run Script */,
 				0712D8501DAFACA2000953B0 /* Sources */,
 				0712D8511DAFACA2000953B0 /* Frameworks */,
 				0712D8521DAFACA2000953B0 /* Resources */,
+				25B494DB899957173CFE9514 /* [CP] Embed Pods Frameworks */,
+				2FF2A4AD346050E8F19D2995 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,13 +182,76 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0712D8701DAFC0B3000953B0 /* mana.png in Resources */,
 				0712D8621DAFACA2000953B0 /* LaunchScreen.storyboard in Resources */,
 				0712D85F1DAFACA2000953B0 /* Assets.xcassets in Resources */,
-				0712D85D1DAFACA2000953B0 /* Main.storyboard in Resources */,
+				0712D85D1DAFACA2000953B0 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0712D86B1DAFB20F000953B0 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		0D91D955156973A777BCADD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		25B494DB899957173CFE9514 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sumire/Pods-Sumire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FF2A4AD346050E8F19D2995 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sumire/Pods-Sumire-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0712D8501DAFACA2000953B0 /* Sources */ = {
@@ -136,19 +259,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				0712D85A1DAFACA2000953B0 /* ViewController.swift in Sources */,
+				0712D8761DAFCC5B000953B0 /* Int+Utility.swift in Sources */,
 				0712D8581DAFACA2000953B0 /* AppDelegate.swift in Sources */,
+				07EBC8B81DB078CE00C29348 /* HistoryDateCell.swift in Sources */,
+				07EBC8BA1DB0796D00C29348 /* DateFormatter+Utility.swift in Sources */,
+				07EBC8B61DB077A800C29348 /* HistorySavingCell.swift in Sources */,
+				0712D86A1DAFB114000953B0 /* HomeViewController.swift in Sources */,
+				0712D8741DAFC8E2000953B0 /* HistoryShoppingCell.swift in Sources */,
+				0712D8721DAFC625000953B0 /* HistoryCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0712D85B1DAFACA2000953B0 /* Main.storyboard */ = {
+		0712D85B1DAFACA2000953B0 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0712D85C1DAFACA2000953B0 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		0712D8601DAFACA2000953B0 /* LaunchScreen.storyboard */ = {
@@ -249,6 +379,7 @@
 		};
 		0712D8671DAFACA2000953B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F672BC6891D167EDB7F8E5A0 /* Pods-Sumire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Sumire/Info.plist;
@@ -260,6 +391,7 @@
 		};
 		0712D8681DAFACA2000953B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CFE45D97FE0945BC425A4A6 /* Pods-Sumire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Sumire/Info.plist;
@@ -288,6 +420,7 @@
 				0712D8681DAFACA2000953B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
