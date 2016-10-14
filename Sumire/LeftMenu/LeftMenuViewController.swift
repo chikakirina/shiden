@@ -31,7 +31,7 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
     var transactionsViewController: UIViewController!
     var savingPlanViewController: UIViewController!
     var paymentPlanViewControlelr: UIViewController!
-    var registeredInfoViewController: UIViewController!
+    var registeredNavigationController: UIViewController!
     var faqViewController: UIViewController!
     var settingViewController: UIViewController!
     
@@ -46,6 +46,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         
         //Remove the UITableViewCell separator for empty cells
         tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        registeredNavigationController = UIStoryboard(name: "Registered", bundle: nil).instantiateInitialViewController()
         
 //        self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
 //        
@@ -69,7 +71,13 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
     }
     
     func changeViewController(menu: LeftMenu) {
-//        switch menu {
+        switch menu {
+        case .home:
+            slideMenuController()?.changeMainViewController(homeViewController, close: true)
+        case .registeredInfo:
+            slideMenuController()?.changeMainViewController(registeredNavigationController, close: true)
+        default:
+            break
 //        case .main:
 //            self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
 //        case .swift:
@@ -80,7 +88,7 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
 //            self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
 //        case .nonMenu:
 //            self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
-//        }
+        }
     }
 }
 
