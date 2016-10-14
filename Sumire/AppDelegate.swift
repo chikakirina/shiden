@@ -14,14 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor.lightGrayColor()
+        guard let menuNavigationController = UIStoryboard(name: "LeftMenu", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
+            fatalError()
+        }
+        guard let menuViewController = menuNavigationController.topViewController as? LeftMenuViewController else {
+            fatalError()
+        }
+        menuViewController.homeViewController = homeViewController
         
-        let slideMenuController = SlideMenuController(mainViewController: homeViewController!, leftMenuViewController: viewController)
+        let slideMenuController = SlideMenuController(mainViewController: homeViewController!, leftMenuViewController: menuNavigationController)
 
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = slideMenuController

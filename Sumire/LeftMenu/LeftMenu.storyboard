@@ -1,7 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WMw-sS-Gwx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2Bk-Cg-Kzc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WMw-sS-Gwx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="600"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y0X-rD-pOI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.66666666669999997" green="0.094117647060000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TS3-fr-5uj" kind="relationship" relationship="rootViewController" id="EI3-tV-k9q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aun-2W-kEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="384"/>
+        </scene>
+        <!--メニュー-->
+        <scene sceneID="OhC-p9-0Ml">
+            <objects>
+                <viewController id="TS3-fr-5uj" customClass="LeftMenuViewController" customModule="Sumire" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pa4-nm-tvn"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZYB-ZJ-mHY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="POC-cf-NDW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KYV-GR-tIX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LeftMenuCell" id="fnS-Bx-WlT" customClass="LeftMenuCell" customModule="Sumire" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fnS-Bx-WlT" id="aZy-w2-njt">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-pI-Zfa">
+                                                    <rect key="frame" x="16" y="21.5" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" red="0.23921568691730499" green="0.25882354378700256" blue="0.28235295414924622" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Keu-pI-Zfa" firstAttribute="centerY" secondItem="aZy-w2-njt" secondAttribute="centerY" id="NEs-h9-7wa"/>
+                                                <constraint firstItem="Keu-pI-Zfa" firstAttribute="leading" secondItem="aZy-w2-njt" secondAttribute="leading" constant="16" id="abb-KY-W81"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Keu-pI-Zfa" id="Jev-cw-opQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TS3-fr-5uj" id="elT-aD-7JI"/>
+                                    <outlet property="delegate" destination="TS3-fr-5uj" id="b2R-gY-XcR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KYV-GR-tIX" firstAttribute="top" secondItem="POC-cf-NDW" secondAttribute="top" id="2SQ-P7-iLe"/>
+                            <constraint firstItem="KYV-GR-tIX" firstAttribute="leading" secondItem="POC-cf-NDW" secondAttribute="leading" id="WzY-Qb-fXQ"/>
+                            <constraint firstItem="ZYB-ZJ-mHY" firstAttribute="top" secondItem="KYV-GR-tIX" secondAttribute="bottom" id="cUb-rd-N7D"/>
+                            <constraint firstAttribute="trailing" secondItem="KYV-GR-tIX" secondAttribute="trailing" id="fTF-Tc-MPa"/>
+                            <constraint firstItem="KYV-GR-tIX" firstAttribute="top" secondItem="Pa4-nm-tvn" secondAttribute="bottom" id="fuU-v3-C9u"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fuU-v3-C9u"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="メニュー" id="Sqi-sO-3S7"/>
+                    <connections>
+                        <outlet property="tableView" destination="KYV-GR-tIX" id="3b0-Ru-b4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOD-Mi-WLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="384"/>
+        </scene>
+    </scenes>
 </document>
