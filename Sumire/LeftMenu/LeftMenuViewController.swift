@@ -48,6 +48,7 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         tableView.tableFooterView = UIView(frame: CGRectZero)
         
         registeredNavigationController = UIStoryboard(name: "Registered", bundle: nil).instantiateInitialViewController()
+        transactionsViewController = UIStoryboard(name: "Transactions", bundle: nil).instantiateInitialViewController()
         
 //        self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
 //        
@@ -74,6 +75,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         switch menu {
         case .home:
             slideMenuController()?.changeMainViewController(homeViewController, close: true)
+        case .transactions:
+            slideMenuController()?.changeMainViewController(transactionsViewController, close: true)
         case .registeredInfo:
             slideMenuController()?.changeMainViewController(registeredNavigationController, close: true)
         default:
