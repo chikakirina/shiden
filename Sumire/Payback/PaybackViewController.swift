@@ -24,7 +24,7 @@ class PaybackViewController: UITableViewController {
     private func generateDebugData() {
         let i1 = InfoCellViewModel(type: .description, name: "種類", description: "第二種奨学金", year: nil, month: nil, totalAmount: nil, averageAmount: nil, loanTotalAmount: nil, interestAmount: nil, interestRate: nil)
 
-        let i2 = InfoCellViewModel(type: .description, name: "返済期間", description: "20年", year: nil, month: nil, totalAmount: nil, averageAmount: nil, loanTotalAmount: nil, interestAmount: nil, interestRate: nil)
+        let i2 = InfoCellViewModel(type: .normalAmount, name: "返済期間", description: nil, year: nil, month: nil, totalAmount: 20, averageAmount: nil, loanTotalAmount: nil, interestAmount: nil, interestRate: nil)
         
         let i3 = InfoCellViewModel(type: .normalAmount, name: "借入総額", description: nil, year: nil, month: nil, totalAmount: 4000000, averageAmount: nil, loanTotalAmount: nil, interestAmount: nil, interestRate: nil)
         
@@ -67,7 +67,7 @@ extension PaybackViewController {
         switch infoModel.type {
         case .normalAmount:
             let cell = tableView.dequeueReusableCellWithIdentifier("normalAmount", forIndexPath: indexPath) as! InfoAmountCell
-            cell.setup(infoModel)
+            indexPath.row == 1 ? cell.setup(infoModel, amountSafix: "年") : cell.setup(infoModel)
             return cell
         case .description:
             let cell = tableView.dequeueReusableCellWithIdentifier("description", forIndexPath: indexPath) as! InfoDescriptionCell

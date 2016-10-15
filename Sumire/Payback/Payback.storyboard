@@ -805,6 +805,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="amountLabel" destination="dzH-ix-m7S" id="qQE-al-toZ"/>
+                                    <outlet property="amountSafixLabel" destination="u2Y-hS-Jt4" id="lQG-IK-kfq"/>
                                     <outlet property="nameLabel" destination="Ce0-Lv-7gP" id="jpu-Jc-cWO"/>
                                 </connections>
                             </tableViewCell>
