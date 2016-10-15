@@ -24,6 +24,10 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLN-G9-oC3" customClass="LineChartView" customModule="Charts">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期間：2016年11月7日 〜 2028年11月31日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s69-66-RaT">
                                     <rect key="frame" x="20" y="190" width="229" height="15"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
@@ -33,9 +37,13 @@
                             </subviews>
                             <color key="backgroundColor" red="0.74901960784313726" green="0.2627450980392157" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
+                                <constraint firstItem="HLN-G9-oC3" firstAttribute="top" secondItem="0M7-vA-rUq" secondAttribute="top" id="8ef-to-Fm5"/>
                                 <constraint firstAttribute="bottom" secondItem="9SA-pn-jW6" secondAttribute="bottom" constant="10" id="NPb-5c-JjM"/>
                                 <constraint firstItem="s69-66-RaT" firstAttribute="leading" secondItem="0M7-vA-rUq" secondAttribute="leading" constant="20" id="OtO-LU-P1M"/>
+                                <constraint firstAttribute="trailing" secondItem="HLN-G9-oC3" secondAttribute="trailing" id="Pi4-uG-jaa"/>
+                                <constraint firstItem="HLN-G9-oC3" firstAttribute="leading" secondItem="0M7-vA-rUq" secondAttribute="leading" id="no2-bN-BRf"/>
                                 <constraint firstItem="9SA-pn-jW6" firstAttribute="leading" secondItem="0M7-vA-rUq" secondAttribute="leading" constant="20" id="nuS-qq-tBp"/>
+                                <constraint firstItem="s69-66-RaT" firstAttribute="top" secondItem="HLN-G9-oC3" secondAttribute="bottom" constant="10" id="ok1-ob-DYW"/>
                                 <constraint firstItem="9SA-pn-jW6" firstAttribute="top" secondItem="s69-66-RaT" secondAttribute="bottom" constant="5" id="uZJ-yr-whD"/>
                             </constraints>
                         </view>
@@ -883,6 +891,9 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1200"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="HLN-G9-oC3" id="r8T-nP-MKw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dz8-Z1-Exb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
