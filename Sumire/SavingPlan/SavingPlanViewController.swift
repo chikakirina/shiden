@@ -36,21 +36,8 @@ class SavingPlanViewController: UITableViewController {
 
 extension SavingPlanViewController {
     internal override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1//models.count
+        return 1
     }
-    
-//    internal override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 36
-//    }
-    
-//    internal override func tableView(tableView: UITableView, viewForHeaderInSection sectionIndex: Int) -> UIView? {
-//        let dateModel = models[sectionIndex]
-//        
-//        let cell = tableView.dequeueReusableCellWithIdentifier("HistoryDateCell") as! HistoryDateCell
-//        cell.setup(dateModel.date)
-//        
-//        return cell
-//    }
     
     internal override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let infoModel = models[indexPath.row]

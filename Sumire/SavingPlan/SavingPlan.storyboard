@@ -816,7 +816,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AL-8K-sau">
-                                            <rect key="frame" x="170" y="3" width="132" height="26.5"/>
+                                            <rect key="frame" x="170" y="11.5" width="132" height="26.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第二種奨学金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jg-gg-MuZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="132" height="26.5"/>
@@ -853,9 +853,11 @@
                                         <constraint firstItem="8AL-8K-sau" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gcs-Xx-UXt" secondAttribute="trailing" constant="5" id="T9p-15-uml"/>
                                         <constraint firstItem="gcs-Xx-UXt" firstAttribute="leading" secondItem="bVS-3l-pUJ" secondAttribute="leading" constant="16" id="fN7-V8-Ia7"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="8AL-8K-sau" secondAttribute="trailing" constant="10" id="omM-b9-Yi7"/>
+                                        <constraint firstItem="8AL-8K-sau" firstAttribute="centerY" secondItem="bVS-3l-pUJ" secondAttribute="centerY" id="yUl-o8-wxO"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="Q4G-NP-wy6"/>
                                             <exclude reference="Rup-L9-NMN"/>
                                         </mask>
                                     </variation>
