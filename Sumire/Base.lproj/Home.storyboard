@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FwY-Cc-Kil">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FwY-Cc-Kil">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -14,11 +14,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="WJA-oZ-tS2">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eia-B1-d8n">
-                                    <rect key="frame" x="0.0" y="156" width="320" height="89"/>
+                                    <rect key="frame" x="0.0" y="156" width="320" height="104"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10月の貯蓄目標（設定金額：3万円）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFJ-57-NkU">
                                             <rect key="frame" x="16" y="10" width="201" height="15"/>
@@ -26,10 +26,18 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbW-wb-6dc" customClass="BarChartView" customModule="Charts">
+                                            <rect key="frame" x="0.0" y="25" width="320" height="74"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.74901960784313726" green="0.2627450980392157" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="HFJ-57-NkU" firstAttribute="leading" secondItem="eia-B1-d8n" secondAttribute="leading" constant="16" id="Du4-If-VvJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="JbW-wb-6dc" secondAttribute="bottom" constant="5" id="ITE-6A-FwB"/>
+                                        <constraint firstItem="JbW-wb-6dc" firstAttribute="leading" secondItem="eia-B1-d8n" secondAttribute="leading" id="IXi-Dv-T2X"/>
+                                        <constraint firstItem="JbW-wb-6dc" firstAttribute="top" secondItem="HFJ-57-NkU" secondAttribute="bottom" id="aU3-R6-m4d"/>
+                                        <constraint firstAttribute="trailing" secondItem="JbW-wb-6dc" secondAttribute="trailing" id="i87-BV-ch8"/>
                                         <constraint firstItem="HFJ-57-NkU" firstAttribute="top" secondItem="eia-B1-d8n" secondAttribute="top" constant="10" id="vmS-9m-xQH"/>
                                     </constraints>
                                 </view>
@@ -148,13 +156,13 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="9cE-sC-UCV">
-                            <rect key="frame" x="0.0" y="509" width="320" height="20"/>
+                            <rect key="frame" x="0.0" y="524" width="320" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryDateCell" rowHeight="36" id="g1f-Ok-mGT" customClass="HistoryDateCell" customModule="Sumire" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="273" width="320" height="36"/>
+                                <rect key="frame" x="0.0" y="288" width="320" height="36"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g1f-Ok-mGT" id="39W-u0-qcg">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
@@ -178,7 +186,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryShoppingCell" rowHeight="100" id="aJw-lx-w0f" customClass="HistoryShoppingCell" customModule="Sumire" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="309" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="324" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aJw-lx-w0f" id="Fu5-Xo-XEn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -313,7 +321,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistorySavingCell" rowHeight="100" id="qVu-N7-7b8" customClass="HistorySavingCell" customModule="Sumire" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="409" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="424" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qVu-N7-7b8" id="SBO-wV-CA1">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -410,6 +418,9 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="600"/>
+                    <connections>
+                        <outlet property="barChartView" destination="JbW-wb-6dc" id="wfH-t5-c5G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64j-dr-xyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

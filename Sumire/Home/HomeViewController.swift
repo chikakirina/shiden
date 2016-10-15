@@ -8,8 +8,11 @@
 
 import UIKit
 import SwiftDate
+import Charts
 
 class HomeViewController: UITableViewController {
+    
+    @IBOutlet weak var barChartView: BarChartView!
     
     private var models: [HistoriesDateModel] = []
     
@@ -19,6 +22,9 @@ class HomeViewController: UITableViewController {
         
         generateDebugData()
         tableView.reloadData()
+        
+        setupGraphStyle(barChartView)
+        barChartView.data = generateGraphData()
     }
     
     private func generateDebugData() {
@@ -44,6 +50,54 @@ class HomeViewController: UITableViewController {
         let d4 = HistoriesDateModel(date: NSDate(year: 2016, month: 10, day: 7), histories: histories)
         
         models = [d1, d2, d3, d4]
+    }
+}
+
+// MARK: Private for BarChart
+
+extension HomeViewController {
+    private func setupGraphStyle(barChartView: BarChartView) {
+        barChartView.leftAxis.labelCount = 3
+        barChartView.leftAxis.axisMaxValue = 30000
+        barChartView.leftAxis.axisMinValue = 0
+        barChartView.leftAxis.labelTextColor = UIColor(white: 1, alpha: 0.5)
+        barChartView.leftAxis.labelFont = UIFont(name: "HelveticaNeue", size: 8)!
+        barChartView.leftAxis.gridColor = UIColor(white: 1, alpha: 0.5)
+        
+        barChartView.rightAxis.enabled = false
+        
+        barChartView.xAxis.labelPosition = .Bottom
+        barChartView.xAxis.labelTextColor = UIColor(white: 1, alpha: 0.5)
+        barChartView.xAxis.labelFont = UIFont(name: "HelveticaNeue", size: 8)!
+        barChartView.xAxis.gridColor = UIColor.clearColor()
+        
+        barChartView.legend.enabled = false
+        barChartView.highlightPerTapEnabled = true
+        barChartView.noDataText = "データがありません"
+        barChartView.descriptionText = ""
+        barChartView.userInteractionEnabled = false
+    }
+    
+    private func generateGraphData() -> BarChartData? {
+        var colors: [UIColor] = []
+        var xVals: [String] = []
+        var yVals: [BarChartDataEntry] = []
+        
+        _ = (1..<31).map { index in
+            colors.append(UIColor.whiteColor())
+            xVals.append("\(index)日")
+            let dataEntry = index < 12 ? BarChartDataEntry(value: 1000 * Double(index) * Double(95 + arc4random() % 10) / 100, xIndex: index) : BarChartDataEntry(value: 0, xIndex: index)
+            yVals.append(dataEntry)
+        }
+        
+        let dataSet = BarChartDataSet(yVals: yVals, label: "")
+        dataSet.valueFont = UIFont.systemFontOfSize(12)
+        dataSet.drawValuesEnabled = false
+        dataSet.colors = colors
+        let data = BarChartData(xVals: xVals, dataSet: dataSet)
+        data.setDrawValues(false)
+        
+        return data
     }
 }
 
