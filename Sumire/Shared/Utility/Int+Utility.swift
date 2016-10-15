@@ -17,6 +17,6 @@ public extension Int {
         let formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
         formatter.locale = NSLocale(localeIdentifier: "ja_JP")
-        return formatter.stringFromNumber(value) ?? "0"
+        return formatter.stringFromNumber(value)?.stringByReplacingOccurrencesOfString("¥", withString: "") ?? "0"
     }
 }
