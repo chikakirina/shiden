@@ -49,6 +49,7 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         
         registeredNavigationController = UIStoryboard(name: "Registered", bundle: nil).instantiateInitialViewController()
         transactionsViewController = UIStoryboard(name: "Transactions", bundle: nil).instantiateInitialViewController()
+        savingPlanViewController = UIStoryboard(name: "SavingPlan", bundle: nil).instantiateInitialViewController()
         
 //        self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
 //        
@@ -79,6 +80,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
             slideMenuController()?.changeMainViewController(transactionsViewController, close: true)
         case .registeredInfo:
             slideMenuController()?.changeMainViewController(registeredNavigationController, close: true)
+        case .savingPlan:
+            slideMenuController()?.changeMainViewController(savingPlanViewController, close: true)
         default:
             break
 //        case .main:
