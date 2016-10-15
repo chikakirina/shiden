@@ -30,13 +30,21 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-Fv-lsR" customClass="LineChartView" customModule="Charts">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.74901960779999999" green="0.26274509800000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="Ntb-Hg-4fV" firstAttribute="top" secondItem="tmL-Pl-kGX" secondAttribute="bottom" constant="5" id="8Ej-ut-6lW"/>
+                                <constraint firstItem="iLN-Fv-lsR" firstAttribute="top" secondItem="iID-85-eNs" secondAttribute="top" id="90q-oD-CK4"/>
                                 <constraint firstItem="tmL-Pl-kGX" firstAttribute="leading" secondItem="iID-85-eNs" secondAttribute="leading" constant="20" id="NGz-R5-jt1"/>
                                 <constraint firstAttribute="bottom" secondItem="Ntb-Hg-4fV" secondAttribute="bottom" constant="10" id="PUe-LZ-MJA"/>
+                                <constraint firstItem="iLN-Fv-lsR" firstAttribute="leading" secondItem="iID-85-eNs" secondAttribute="leading" id="VmK-RV-cul"/>
+                                <constraint firstAttribute="trailing" secondItem="iLN-Fv-lsR" secondAttribute="trailing" id="WrY-14-fwh"/>
                                 <constraint firstItem="Ntb-Hg-4fV" firstAttribute="leading" secondItem="iID-85-eNs" secondAttribute="leading" constant="20" id="nL4-x2-aXU"/>
+                                <constraint firstItem="tmL-Pl-kGX" firstAttribute="top" secondItem="iLN-Fv-lsR" secondAttribute="bottom" constant="10" id="qDC-qB-L6i"/>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="9cF-Xa-LWH">
@@ -884,6 +892,9 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1200"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="iLN-Fv-lsR" id="oMn-oC-q2t"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uP2-eY-eB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

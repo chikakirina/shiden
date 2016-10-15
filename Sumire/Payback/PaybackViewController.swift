@@ -8,8 +8,11 @@
 
 import UIKit
 import SwiftDate
+import Charts
 
 class PaybackViewController: UITableViewController {
+    
+    @IBOutlet weak var lineChartView: LineChartView!
     
     private var models: [InfoCellViewModel] = []
     
@@ -19,6 +22,9 @@ class PaybackViewController: UITableViewController {
         
         generateDebugData()
         tableView.reloadData()
+        
+        setupGraphStyle(lineChartView)
+        lineChartView.data = generateGraphData()
     }
     
     private func generateDebugData() {
@@ -33,6 +39,62 @@ class PaybackViewController: UITableViewController {
         let i5 = InfoCellViewModel(type: .payback, name: nil, description: nil, year: nil, month: nil, totalAmount: 5441745, averageAmount: 56129, loanTotalAmount: 4000000, interestAmount: 1441745, interestRate: 0.03)
         
         models = [i1, i2, i3, i4, i5]
+    }
+}
+
+// MARK: Private for BarChart
+
+extension PaybackViewController {
+    private func setupGraphStyle(barChartView: LineChartView) {
+        barChartView.leftAxis.labelCount = 4
+        barChartView.leftAxis.axisMaxValue = 400
+        barChartView.leftAxis.axisMinValue = 0
+        barChartView.leftAxis.labelTextColor = UIColor(white: 1, alpha: 0.5)
+        barChartView.leftAxis.labelFont = UIFont(name: "HelveticaNeue", size: 8)!
+        barChartView.leftAxis.gridColor = UIColor(white: 1, alpha: 0.5)
+        
+        barChartView.rightAxis.enabled = false
+        
+        barChartView.xAxis.labelPosition = .Bottom
+        barChartView.xAxis.labelTextColor = UIColor(white: 1, alpha: 0.5)
+        barChartView.xAxis.labelFont = UIFont(name: "HelveticaNeue", size: 8)!
+        barChartView.xAxis.gridColor = UIColor.clearColor()
+        
+        barChartView.legend.enabled = false
+        barChartView.highlightPerTapEnabled = true
+        barChartView.noDataText = "データがありません"
+        barChartView.descriptionText = ""
+        barChartView.userInteractionEnabled = false
+    }
+    
+    private func generateGraphData() -> LineChartData? {
+        var colors: [UIColor] = []
+        var xVals: [String] = []
+        var yVals: [ChartDataEntry] = []
+        
+        _ = (0..<6).map { index in
+            colors.append(UIColor.clearColor())
+            xVals.append("\(index * 5)年")
+            let dataEntry = ChartDataEntry(value: 400 - Double(index) * 100, xIndex: index)
+            yVals.append(dataEntry)
+        }
+        
+        let dataSet = LineChartDataSet(yVals: yVals, label: "")
+        dataSet.valueFont = UIFont.systemFontOfSize(12)
+        dataSet.drawValuesEnabled = false
+        dataSet.colors = colors
+        
+        dataSet.fillAlpha = 1
+        dataSet.fillColor = UIColor(white: 1, alpha: 0.75)
+        dataSet.drawFilledEnabled = true
+        
+        dataSet.circleColors = colors
+        dataSet.drawCirclesEnabled = false
+        
+        let data = LineChartData(xVals: xVals, dataSet: dataSet)
+        data.setDrawValues(false)
+        
+        return data
     }
 }
 
