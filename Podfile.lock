@@ -1,21 +1,26 @@
 PODS:
   - Alamofire (3.4.2)
+  - Charts (2.2.5):
+    - Charts/Core (= 2.2.5)
+  - Charts/Core (2.2.5)
   - ObjectMapper (1.4.0)
   - SlideMenuControllerSwift (2.2.2)
   - SwiftDate (3.0.8)
 
 DEPENDENCIES:
   - Alamofire
+  - Charts (~> 2.2)
   - ObjectMapper
   - SlideMenuControllerSwift (~> 2.2)
   - SwiftDate
 
 SPEC CHECKSUMS:
   Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
+  Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
   SlideMenuControllerSwift: e257221100c39d49edccaaeb0238b55a0c67953a
   SwiftDate: 971f8b9394f664f2226b9c3ab64e801a7291c612
 
-PODFILE CHECKSUM: 37eff62a4c7440e048811d8331e3c01976f8a2fd
+PODFILE CHECKSUM: 4c151d1bb2ce07dc7492bc993afe21894dd504e7
 
 COCOAPODS: 1.0.1

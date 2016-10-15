@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -24,8 +25,15 @@
                                     <color key="textColor" red="0.66666666669999997" green="0.094117647060000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RP7-Hj-N7L" customClass="PieChartView" customModule="Charts">
+                                    <rect key="frame" x="68" y="56" width="184" height="184"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="RP7-Hj-N7L" secondAttribute="height" multiplier="1:1" id="g7g-Uq-AyQ"/>
+                                    </constraints>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2012.07.13 〜 2016.10.13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GX-l4-RIN">
-                                    <rect key="frame" x="93.5" y="46.5" width="141" height="15"/>
+                                    <rect key="frame" x="93.5" y="46" width="141" height="15"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                     <color key="textColor" red="0.66666666669999997" green="0.094117647060000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -33,13 +41,16 @@
                             </subviews>
                             <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="RP7-Hj-N7L" secondAttribute="bottom" constant="-5" id="573-kn-nLY"/>
                                 <constraint firstItem="eXg-1k-mRX" firstAttribute="top" secondItem="n2J-wR-ZNP" secondAttribute="top" constant="20" id="5Fw-uN-PD2"/>
                                 <constraint firstItem="3GX-l4-RIN" firstAttribute="top" secondItem="eXg-1k-mRX" secondAttribute="bottom" constant="5" id="Gf9-fY-Fkv"/>
                                 <constraint firstAttribute="bottom" secondItem="3GX-l4-RIN" secondAttribute="bottom" constant="10" id="Hbc-l9-53a"/>
                                 <constraint firstItem="3GX-l4-RIN" firstAttribute="leading" secondItem="n2J-wR-ZNP" secondAttribute="leading" constant="20" id="Hop-r8-cFm"/>
                                 <constraint firstItem="eXg-1k-mRX" firstAttribute="leading" secondItem="n2J-wR-ZNP" secondAttribute="leading" constant="20" id="OBy-t1-v7w"/>
                                 <constraint firstItem="3GX-l4-RIN" firstAttribute="top" secondItem="eXg-1k-mRX" secondAttribute="bottom" constant="5" id="XUE-Js-csc"/>
+                                <constraint firstItem="RP7-Hj-N7L" firstAttribute="centerX" secondItem="n2J-wR-ZNP" secondAttribute="centerX" id="Yno-YE-tmr"/>
                                 <constraint firstItem="3GX-l4-RIN" firstAttribute="centerX" secondItem="n2J-wR-ZNP" secondAttribute="centerX" id="bIE-JC-5YO"/>
+                                <constraint firstItem="RP7-Hj-N7L" firstAttribute="top" secondItem="3GX-l4-RIN" secondAttribute="bottom" constant="-5" id="fBp-vz-amc"/>
                                 <constraint firstItem="eXg-1k-mRX" firstAttribute="centerX" secondItem="n2J-wR-ZNP" secondAttribute="centerX" id="o0i-dz-VLh"/>
                             </constraints>
                             <variation key="default">
@@ -151,6 +162,9 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="600"/>
+                    <connections>
+                        <outlet property="pieChartView" destination="RP7-Hj-N7L" id="L82-Op-NPi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6NP-Tt-8do" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
