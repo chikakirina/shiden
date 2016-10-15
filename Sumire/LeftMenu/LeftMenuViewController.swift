@@ -14,6 +14,7 @@ enum LeftMenu: Int {
     case savingPlan
     case paybackPlan
     case registeredInfo
+    case contribution
     case faq
     case setting
     case logout
@@ -26,12 +27,13 @@ protocol LeftMenuProtocol : class {
 class LeftMenuViewController : UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["ホーム", "入金履歴", "貯蓄目標", "将来の返済計画", "イオン銀行・WAONカード","FAQ","設定","ログアウト"]
+    var menus = ["ホーム", "入金履歴", "貯蓄目標", "将来の返済計画", "イオン銀行・WAONカード","貢献度","FAQ","設定","ログアウト"]
     var homeViewController: UIViewController!
     var transactionsViewController: UIViewController!
     var savingPlanViewController: UIViewController!
     var paybackPlanViewControlelr: UIViewController!
     var registeredNavigationController: UIViewController!
+    var contributionNavigationController: UIViewController!
     var faqViewController: UIViewController!
     var settingViewController: UIViewController!
     
@@ -51,6 +53,7 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         transactionsViewController = UIStoryboard(name: "Transactions", bundle: nil).instantiateInitialViewController()
         savingPlanViewController = UIStoryboard(name: "SavingPlan", bundle: nil).instantiateInitialViewController()
         paybackPlanViewControlelr = UIStoryboard(name: "Payback", bundle: nil).instantiateInitialViewController()
+        contributionNavigationController = UIStoryboard(name: "Contribution", bundle: nil).instantiateInitialViewController()
 
 //        self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
 //        
@@ -85,6 +88,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
             slideMenuController()?.changeMainViewController(savingPlanViewController, close: true)
         case .paybackPlan:
             slideMenuController()?.changeMainViewController(paybackPlanViewControlelr, close: true)
+        case .contribution:
+            slideMenuController()?.changeMainViewController(contributionNavigationController, close: true)
         default:
             break
 //        case .main:

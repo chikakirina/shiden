@@ -40,6 +40,10 @@
 		270FD5681DB1D8B500687176 /* Double+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5671DB1D8B500687176 /* Double+Utility.swift */; };
 		270FD56B1DB1E0CD00687176 /* PaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD56A1DB1E0CD00687176 /* PaybackViewController.swift */; };
 		270FD56D1DB1E0DB00687176 /* Payback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270FD56C1DB1E0DB00687176 /* Payback.storyboard */; };
+		270FD5701DB1ED4900687176 /* Contribution.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270FD56F1DB1ED4900687176 /* Contribution.storyboard */; };
+		270FD5721DB1ED5800687176 /* ContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5711DB1ED5800687176 /* ContributionViewController.swift */; };
+		270FD5741DB1F0DD00687176 /* ContributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5731DB1F0DD00687176 /* ContributionCell.swift */; };
+		270FD5761DB1F21300687176 /* ContributionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5751DB1F21300687176 /* ContributionCellViewModel.swift */; };
 		7692E697B7838F6146BF0951 /* Pods_Sumire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +83,10 @@
 		270FD5671DB1D8B500687176 /* Double+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Utility.swift"; sourceTree = "<group>"; };
 		270FD56A1DB1E0CD00687176 /* PaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaybackViewController.swift; sourceTree = "<group>"; };
 		270FD56C1DB1E0DB00687176 /* Payback.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Payback.storyboard; sourceTree = "<group>"; };
+		270FD56F1DB1ED4900687176 /* Contribution.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contribution.storyboard; sourceTree = "<group>"; };
+		270FD5711DB1ED5800687176 /* ContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionViewController.swift; sourceTree = "<group>"; };
+		270FD5731DB1F0DD00687176 /* ContributionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCell.swift; sourceTree = "<group>"; };
+		270FD5751DB1F21300687176 /* ContributionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCellViewModel.swift; sourceTree = "<group>"; };
 		355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sumire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE45D97FE0945BC425A4A6 /* Pods-Sumire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.release.xcconfig"; sourceTree = "<group>"; };
 		F672BC6891D167EDB7F8E5A0 /* Pods-Sumire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +132,7 @@
 				07EBC8DA1DB0FBD900C29348 /* Registered */,
 				270FD5551DB1C60600687176 /* SavingPlan */,
 				270FD5691DB1E0C000687176 /* Payback */,
+				270FD56E1DB1ED0600687176 /* Contribution */,
 				07EBC8D31DB0E63200C29348 /* LeftMenu */,
 				07EBC8C31DB0E3A500C29348 /* Shared */,
 				0712D85E1DAFACA2000953B0 /* Assets.xcassets */,
@@ -252,6 +261,17 @@
 			path = Payback;
 			sourceTree = "<group>";
 		};
+		270FD56E1DB1ED0600687176 /* Contribution */ = {
+			isa = PBXGroup;
+			children = (
+				270FD56F1DB1ED4900687176 /* Contribution.storyboard */,
+				270FD5711DB1ED5800687176 /* ContributionViewController.swift */,
+				270FD5731DB1F0DD00687176 /* ContributionCell.swift */,
+				270FD5751DB1F21300687176 /* ContributionCellViewModel.swift */,
+			);
+			path = Contribution;
+			sourceTree = "<group>";
+		};
 		5D4E26946866E3C6FAE0706F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +350,7 @@
 				07EBC8D71DB0E89200C29348 /* LeftMenu.storyboard in Resources */,
 				0712D85D1DAFACA2000953B0 /* Home.storyboard in Resources */,
 				270FD5591DB1C65200687176 /* SavingPlan.storyboard in Resources */,
+				270FD5701DB1ED4900687176 /* Contribution.storyboard in Resources */,
 				270FD56D1DB1E0DB00687176 /* Payback.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,18 +436,21 @@
 				07EBC8E01DB0FCD800C29348 /* RegisteredCardCell.swift in Sources */,
 				270FD5641DB1CFA100687176 /* InfoPaybackCell.swift in Sources */,
 				07EBC8CF1DB0E3A500C29348 /* HistorySavingCell.swift in Sources */,
+				270FD5721DB1ED5800687176 /* ContributionViewController.swift in Sources */,
 				0712D8581DAFACA2000953B0 /* AppDelegate.swift in Sources */,
 				07EBC8D91DB0EB7E00C29348 /* LeftMenuCell.swift in Sources */,
 				07EBC8CC1DB0E3A500C29348 /* HomeViewController.swift in Sources */,
 				07EBC8CD1DB0E3A500C29348 /* HistoryCellViewModel.swift in Sources */,
 				270FD5571DB1C61300687176 /* SavingPlanViewController.swift in Sources */,
 				270FD5621DB1CF9200687176 /* InfoShortCell.swift in Sources */,
+				270FD5741DB1F0DD00687176 /* ContributionCell.swift in Sources */,
 				07EBC8DC1DB0FBE800C29348 /* RegisteredViewController.swift in Sources */,
 				07EBC8E21DB101D500C29348 /* RegisteredCardViewModel.swift in Sources */,
 				270FD5681DB1D8B500687176 /* Double+Utility.swift in Sources */,
 				07EBC8D11DB0E3A500C29348 /* DateFormatter+Utility.swift in Sources */,
 				270FD5601DB1CF6300687176 /* InfoSaveCell.swift in Sources */,
 				073AC9011DB11703007EF051 /* TransactionsViewController.swift in Sources */,
+				270FD5761DB1F21300687176 /* ContributionCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
