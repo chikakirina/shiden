@@ -42,29 +42,29 @@ class PaybackViewController: UITableViewController {
     }
 }
 
-// MARK: Private for BarChart
+// MARK: Private for LineChart
 
 extension PaybackViewController {
-    private func setupGraphStyle(barChartView: LineChartView) {
-        barChartView.leftAxis.labelCount = 4
-        barChartView.leftAxis.axisMaxValue = 400
-        barChartView.leftAxis.axisMinValue = 0
-        barChartView.leftAxis.labelTextColor = UIColor(white: 1, alpha: 0.5)
-        barChartView.leftAxis.labelFont = UIFont(name: "HelveticaNeue", size: 8)!
-        barChartView.leftAxis.gridColor = UIColor(white: 1, alpha: 0.5)
+    private func setupGraphStyle(lineChartView: LineChartView) {
+        lineChartView.leftAxis.labelCount = 4
+        lineChartView.leftAxis.axisMaxValue = 400
+        lineChartView.leftAxis.axisMinValue = 0
+        lineChartView.leftAxis.labelTextColor = UIColor(white: 1, alpha: 0.5)
+        lineChartView.leftAxis.labelFont = UIFont(name: "HelveticaNeue", size: 8)!
+        lineChartView.leftAxis.gridColor = UIColor(white: 1, alpha: 0.5)
         
-        barChartView.rightAxis.enabled = false
+        lineChartView.rightAxis.enabled = false
         
-        barChartView.xAxis.labelPosition = .Bottom
-        barChartView.xAxis.labelTextColor = UIColor(white: 1, alpha: 0.5)
-        barChartView.xAxis.labelFont = UIFont(name: "HelveticaNeue", size: 8)!
-        barChartView.xAxis.gridColor = UIColor.clearColor()
+        lineChartView.xAxis.labelPosition = .Bottom
+        lineChartView.xAxis.labelTextColor = UIColor(white: 1, alpha: 0.5)
+        lineChartView.xAxis.labelFont = UIFont(name: "HelveticaNeue", size: 8)!
+        lineChartView.xAxis.gridColor = UIColor.clearColor()
         
-        barChartView.legend.enabled = false
-        barChartView.highlightPerTapEnabled = true
-        barChartView.noDataText = "データがありません"
-        barChartView.descriptionText = ""
-        barChartView.userInteractionEnabled = false
+        lineChartView.legend.enabled = false
+        lineChartView.highlightPerTapEnabled = true
+        lineChartView.noDataText = "データがありません"
+        lineChartView.descriptionText = ""
+        lineChartView.userInteractionEnabled = false
     }
     
     private func generateGraphData() -> LineChartData? {
