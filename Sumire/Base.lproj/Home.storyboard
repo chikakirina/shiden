@@ -17,28 +17,43 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eia-B1-d8n">
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eia-B1-d8n">
                                     <rect key="frame" x="0.0" y="156" width="320" height="104"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10月の貯蓄目標（設定金額：3万円）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFJ-57-NkU">
-                                            <rect key="frame" x="16" y="10" width="201" height="15"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <rect key="frame" x="16" y="10" width="217.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbW-wb-6dc" customClass="BarChartView" customModule="Charts">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JbW-wb-6dc" customClass="BarChartView" customModule="Charts">
                                             <rect key="frame" x="0.0" y="25" width="320" height="74"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未達成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7d-yR-ZWD" customClass="RoundedLabel" customModule="Sumire" customModuleProvider="target">
+                                            <rect key="frame" x="285" y="12" width="27" height="11"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                            <color key="textColor" red="0.74901960784313726" green="0.2627450980392157" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.74901960784313726" green="0.2627450980392157" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="HFJ-57-NkU" firstAttribute="leading" secondItem="eia-B1-d8n" secondAttribute="leading" constant="16" id="Du4-If-VvJ"/>
                                         <constraint firstAttribute="bottom" secondItem="JbW-wb-6dc" secondAttribute="bottom" constant="5" id="ITE-6A-FwB"/>
                                         <constraint firstItem="JbW-wb-6dc" firstAttribute="leading" secondItem="eia-B1-d8n" secondAttribute="leading" id="IXi-Dv-T2X"/>
+                                        <constraint firstAttribute="trailing" secondItem="s7d-yR-ZWD" secondAttribute="trailing" constant="8" id="Mdl-Fp-fUx"/>
                                         <constraint firstItem="JbW-wb-6dc" firstAttribute="top" secondItem="HFJ-57-NkU" secondAttribute="bottom" id="aU3-R6-m4d"/>
                                         <constraint firstAttribute="trailing" secondItem="JbW-wb-6dc" secondAttribute="trailing" id="i87-BV-ch8"/>
                                         <constraint firstItem="HFJ-57-NkU" firstAttribute="top" secondItem="eia-B1-d8n" secondAttribute="top" constant="10" id="vmS-9m-xQH"/>
+                                        <constraint firstItem="s7d-yR-ZWD" firstAttribute="centerY" secondItem="HFJ-57-NkU" secondAttribute="centerY" id="yl5-Ah-PlZ"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="学費口座 積立累計" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3L-hO-Yec">
@@ -59,17 +74,17 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJp-Yn-U85">
-                                    <rect key="frame" x="170" y="45" width="133.5" height="30"/>
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJp-Yn-U85">
+                                    <rect key="frame" x="157" y="45" width="146.5" height="33.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,708,650" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amr-P0-ceu">
-                                            <rect key="frame" x="0.0" y="0.0" width="113.5" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="127" height="33.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzz-hE-aIy">
-                                            <rect key="frame" x="118" y="12" width="15" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzz-hE-aIy">
+                                            <rect key="frame" x="131" y="15" width="15" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -93,7 +108,7 @@
                                         </mask>
                                     </variation>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Y4-so-68c">
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Y4-so-68c">
                                     <rect key="frame" x="204" y="115" width="99.5" height="26.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+15,813" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-PM-LvF">
@@ -304,6 +319,12 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Np6-Rk-WQk" secondAttribute="trailing" constant="5" id="zRf-BS-vQ8"/>
                                                 <constraint firstItem="bzx-mV-dsI" firstAttribute="top" secondItem="9xr-pu-X8C" secondAttribute="top" constant="30" id="zmU-Zj-Fqp"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
@@ -390,6 +411,12 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IxF-p2-csr" secondAttribute="trailing" constant="5" id="x3r-XE-vti"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ch5-df-cYk" secondAttribute="trailing" constant="5" id="z0I-ab-LV0"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>

@@ -44,6 +44,7 @@
 		270FD5721DB1ED5800687176 /* ContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5711DB1ED5800687176 /* ContributionViewController.swift */; };
 		270FD5741DB1F0DD00687176 /* ContributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5731DB1F0DD00687176 /* ContributionCell.swift */; };
 		270FD5761DB1F21300687176 /* ContributionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5751DB1F21300687176 /* ContributionCellViewModel.swift */; };
+		270FD57F1DB2192500687176 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD57E1DB2192500687176 /* Label.swift */; };
 		7692E697B7838F6146BF0951 /* Pods_Sumire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		270FD5711DB1ED5800687176 /* ContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionViewController.swift; sourceTree = "<group>"; };
 		270FD5731DB1F0DD00687176 /* ContributionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCell.swift; sourceTree = "<group>"; };
 		270FD5751DB1F21300687176 /* ContributionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCellViewModel.swift; sourceTree = "<group>"; };
+		270FD57E1DB2192500687176 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sumire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE45D97FE0945BC425A4A6 /* Pods-Sumire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.release.xcconfig"; sourceTree = "<group>"; };
 		F672BC6891D167EDB7F8E5A0 /* Pods-Sumire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				07EBC8C41DB0E3A500C29348 /* History */,
 				270FD55A1DB1CE7300687176 /* Info */,
 				07EBC8C91DB0E3A500C29348 /* Utility */,
+				270FD57D1DB2191700687176 /* UI */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -270,6 +273,14 @@
 				270FD5751DB1F21300687176 /* ContributionCellViewModel.swift */,
 			);
 			path = Contribution;
+			sourceTree = "<group>";
+		};
+		270FD57D1DB2191700687176 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				270FD57E1DB2192500687176 /* Label.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		5D4E26946866E3C6FAE0706F /* Frameworks */ = {
@@ -450,6 +461,7 @@
 				07EBC8D11DB0E3A500C29348 /* DateFormatter+Utility.swift in Sources */,
 				270FD5601DB1CF6300687176 /* InfoSaveCell.swift in Sources */,
 				073AC9011DB11703007EF051 /* TransactionsViewController.swift in Sources */,
+				270FD57F1DB2192500687176 /* Label.swift in Sources */,
 				270FD5761DB1F21300687176 /* ContributionCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
