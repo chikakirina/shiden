@@ -23,8 +23,8 @@ class StartDemographicViewController: UIViewController {
         tableView.tableFooterView = UIView()
     }
     
-    @IBAction func testButtonTap(sender: UIButton) {
-        //datePicker()
+    @IBAction func tapNextButton(sender: UIButton) {
+        performSegueWithIdentifier("SettingNext", sender: nil)
     }
     
     private func selectDate() {

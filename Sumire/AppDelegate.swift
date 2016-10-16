@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let jstTimezone = NSTimeZone(name: "JST")
         NSTimeZone.setDefaultTimeZone(jstTimezone!)
         
+        // UIAppearance
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        
         let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()
         guard let menuNavigationController = UIStoryboard(name: "LeftMenu", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
             fatalError()

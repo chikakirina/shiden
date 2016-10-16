@@ -25,7 +25,7 @@ protocol LeftMenuProtocol : class {
 }
 
 class LeftMenuViewController : UIViewController, LeftMenuProtocol {
-    
+        
     @IBOutlet weak var tableView: UITableView!
     var menus = ["ホーム", "入金履歴", "貯蓄目標", "将来の返済計画", "イオン銀行・WAONカード","貢献度","FAQ","設定","ログアウト"]
     var homeViewController: UIViewController!
@@ -47,6 +47,9 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set SharedInstance
+        SharedInstanceManager.instance.leftMenuViewController = self
+        
         //Remove the UITableViewCell separator for empty cells
         tableView.tableFooterView = UIView(frame: CGRectZero)
         
@@ -57,29 +60,13 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         contributionNavigationController = UIStoryboard(name: "Contribution", bundle: nil).instantiateInitialViewController()
 
         startNavigationController = UIStoryboard(name: "Start", bundle: nil).instantiateInitialViewController()
-        
-//        self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
-//        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let swiftViewController = storyboard.instantiateViewController(withIdentifier: "SwiftViewController") as! SwiftViewController
-//        self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
-//        
-//        let javaViewController = storyboard.instantiateViewController(withIdentifier: "JavaViewController") as! JavaViewController
-//        self.javaViewController = UINavigationController(rootViewController: javaViewController)
-//        
-//        let goViewController = storyboard.instantiateViewController(withIdentifier: "GoViewController") as! GoViewController
-//        self.goViewController = UINavigationController(rootViewController: goViewController)
-//        
-//        let nonMenuController = storyboard.instantiateViewController(withIdentifier: "NonMenuController") as! NonMenuController
-//        nonMenuController.delegate = self
-//        self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    func changeViewController(menu: LeftMenu) {
+    internal func changeViewController(menu: LeftMenu) {
         switch menu {
         case .home:
             slideMenuController()?.changeMainViewController(homeViewController, close: true)
@@ -97,17 +84,11 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
             slideMenuController()?.changeMainViewController(startNavigationController, close: true)
         default:
             break
-//        case .main:
-//            self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
-//        case .swift:
-//            self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
-//        case .java:
-//            self.slideMenuController()?.changeMainViewController(self.javaViewController, close: true)
-//        case .go:
-//            self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
-//        case .nonMenu:
-//            self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
         }
+        
+        // Update Selected Menu
+        selectedMenu = menu
+        tableView.reloadData()
     }
 }
 
@@ -116,10 +97,6 @@ extension LeftMenuViewController : UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let menu = LeftMenu(rawValue: indexPath.row) {
             self.changeViewController(menu)
-            
-            // Update Selected Menu
-            selectedMenu = menu
-            tableView.reloadData()
         }
     }
 }

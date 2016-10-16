@@ -49,6 +49,8 @@
 		270FD5861DB3185C00687176 /* StartDemographicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5851DB3185C00687176 /* StartDemographicViewController.swift */; };
 		270FD5881DB3241F00687176 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5871DB3241F00687176 /* SettingCell.swift */; };
 		270FD58C1DB3325600687176 /* icon_arrow_under@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270FD58B1DB3325600687176 /* icon_arrow_under@2x.png */; };
+		270FD5901DB337C500687176 /* BurdenSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD58F1DB337C500687176 /* BurdenSettingViewController.swift */; };
+		270FD5921DB341A700687176 /* SharedInstanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5911DB341A700687176 /* SharedInstanceManager.swift */; };
 		7692E697B7838F6146BF0951 /* Pods_Sumire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		270FD5851DB3185C00687176 /* StartDemographicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartDemographicViewController.swift; sourceTree = "<group>"; };
 		270FD5871DB3241F00687176 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		270FD58B1DB3325600687176 /* icon_arrow_under@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_under@2x.png"; sourceTree = "<group>"; };
+		270FD58F1DB337C500687176 /* BurdenSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurdenSettingViewController.swift; sourceTree = "<group>"; };
+		270FD5911DB341A700687176 /* SharedInstanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedInstanceManager.swift; sourceTree = "<group>"; };
 		355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sumire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE45D97FE0945BC425A4A6 /* Pods-Sumire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.release.xcconfig"; sourceTree = "<group>"; };
 		F672BC6891D167EDB7F8E5A0 /* Pods-Sumire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			children = (
 				0712D8571DAFACA2000953B0 /* AppDelegate.swift */,
 				0712D8591DAFACA2000953B0 /* ViewController.swift */,
+				270FD5911DB341A700687176 /* SharedInstanceManager.swift */,
 				07EBC8C11DB0E3A500C29348 /* Home */,
 				073AC8FD1DB11703007EF051 /* Transactions */,
 				07EBC8DA1DB0FBD900C29348 /* Registered */,
@@ -299,6 +304,7 @@
 				270FD5851DB3185C00687176 /* StartDemographicViewController.swift */,
 				270FD5831DB317F700687176 /* Start.storyboard */,
 				270FD5871DB3241F00687176 /* SettingCell.swift */,
+				270FD58F1DB337C500687176 /* BurdenSettingViewController.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -479,12 +485,14 @@
 				270FD5571DB1C61300687176 /* SavingPlanViewController.swift in Sources */,
 				270FD5621DB1CF9200687176 /* InfoShortCell.swift in Sources */,
 				270FD5741DB1F0DD00687176 /* ContributionCell.swift in Sources */,
+				270FD5901DB337C500687176 /* BurdenSettingViewController.swift in Sources */,
 				07EBC8DC1DB0FBE800C29348 /* RegisteredViewController.swift in Sources */,
 				07EBC8E21DB101D500C29348 /* RegisteredCardViewModel.swift in Sources */,
 				270FD5681DB1D8B500687176 /* Double+Utility.swift in Sources */,
 				07EBC8D11DB0E3A500C29348 /* DateFormatter+Utility.swift in Sources */,
 				270FD5601DB1CF6300687176 /* InfoSaveCell.swift in Sources */,
 				073AC9011DB11703007EF051 /* TransactionsViewController.swift in Sources */,
+				270FD5921DB341A700687176 /* SharedInstanceManager.swift in Sources */,
 				270FD57F1DB2192500687176 /* Label.swift in Sources */,
 				270FD5761DB1F21300687176 /* ContributionCellViewModel.swift in Sources */,
 			);
