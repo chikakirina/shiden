@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Timezoneの設定
+        let jstTimezone = NSTimeZone(name: "JST")
+        NSTimeZone.setDefaultTimeZone(jstTimezone!)
+        
         let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()
         guard let menuNavigationController = UIStoryboard(name: "LeftMenu", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
             fatalError()

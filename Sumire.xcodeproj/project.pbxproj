@@ -45,6 +45,10 @@
 		270FD5741DB1F0DD00687176 /* ContributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5731DB1F0DD00687176 /* ContributionCell.swift */; };
 		270FD5761DB1F21300687176 /* ContributionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5751DB1F21300687176 /* ContributionCellViewModel.swift */; };
 		270FD57F1DB2192500687176 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD57E1DB2192500687176 /* Label.swift */; };
+		270FD5841DB317F700687176 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270FD5831DB317F700687176 /* Start.storyboard */; };
+		270FD5861DB3185C00687176 /* StartDemographicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5851DB3185C00687176 /* StartDemographicViewController.swift */; };
+		270FD5881DB3241F00687176 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5871DB3241F00687176 /* SettingCell.swift */; };
+		270FD58C1DB3325600687176 /* icon_arrow_under@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270FD58B1DB3325600687176 /* icon_arrow_under@2x.png */; };
 		7692E697B7838F6146BF0951 /* Pods_Sumire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +93,10 @@
 		270FD5731DB1F0DD00687176 /* ContributionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCell.swift; sourceTree = "<group>"; };
 		270FD5751DB1F21300687176 /* ContributionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCellViewModel.swift; sourceTree = "<group>"; };
 		270FD57E1DB2192500687176 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		270FD5831DB317F700687176 /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		270FD5851DB3185C00687176 /* StartDemographicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartDemographicViewController.swift; sourceTree = "<group>"; };
+		270FD5871DB3241F00687176 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		270FD58B1DB3325600687176 /* icon_arrow_under@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_under@2x.png"; sourceTree = "<group>"; };
 		355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sumire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE45D97FE0945BC425A4A6 /* Pods-Sumire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.release.xcconfig"; sourceTree = "<group>"; };
 		F672BC6891D167EDB7F8E5A0 /* Pods-Sumire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 				270FD5551DB1C60600687176 /* SavingPlan */,
 				270FD5691DB1E0C000687176 /* Payback */,
 				270FD56E1DB1ED0600687176 /* Contribution */,
+				270FD5801DB3179900687176 /* Start */,
 				07EBC8D31DB0E63200C29348 /* LeftMenu */,
 				07EBC8C31DB0E3A500C29348 /* Shared */,
 				0712D85E1DAFACA2000953B0 /* Assets.xcassets */,
@@ -150,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				0712D86F1DAFC0B3000953B0 /* mana.png */,
+				270FD58B1DB3325600687176 /* icon_arrow_under@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -283,6 +293,16 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		270FD5801DB3179900687176 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				270FD5851DB3185C00687176 /* StartDemographicViewController.swift */,
+				270FD5831DB317F700687176 /* Start.storyboard */,
+				270FD5871DB3241F00687176 /* SettingCell.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
 		5D4E26946866E3C6FAE0706F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,9 +373,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270FD58C1DB3325600687176 /* icon_arrow_under@2x.png in Resources */,
 				0712D8701DAFC0B3000953B0 /* mana.png in Resources */,
 				0712D8621DAFACA2000953B0 /* LaunchScreen.storyboard in Resources */,
 				07EBC8DE1DB0FBF500C29348 /* Registered.storyboard in Resources */,
+				270FD5841DB317F700687176 /* Start.storyboard in Resources */,
 				073AC9001DB11703007EF051 /* Transactions.storyboard in Resources */,
 				0712D85F1DAFACA2000953B0 /* Assets.xcassets in Resources */,
 				07EBC8D71DB0E89200C29348 /* LeftMenu.storyboard in Resources */,
@@ -440,8 +462,10 @@
 				07EBC8CE1DB0E3A500C29348 /* HistoryDateCell.swift in Sources */,
 				270FD55C1DB1CE8800687176 /* InfoAmountCell.swift in Sources */,
 				07EBC8D21DB0E3A500C29348 /* Int+Utility.swift in Sources */,
+				270FD5861DB3185C00687176 /* StartDemographicViewController.swift in Sources */,
 				07EBC8D01DB0E3A500C29348 /* HistoryShoppingCell.swift in Sources */,
 				270FD55E1DB1CEC800687176 /* InfoDescriptionCell.swift in Sources */,
+				270FD5881DB3241F00687176 /* SettingCell.swift in Sources */,
 				0712D85A1DAFACA2000953B0 /* ViewController.swift in Sources */,
 				07EBC8D51DB0E63F00C29348 /* LeftMenuViewController.swift in Sources */,
 				07EBC8E01DB0FCD800C29348 /* RegisteredCardCell.swift in Sources */,

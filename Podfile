@@ -15,5 +15,6 @@ pod 'SlideMenuControllerSwift', '~> 2.2'
 #pod 'ResourceKit', '= 0.1.12'
 
 pod 'Charts', '~> 2.2'
+pod 'ActionSheetPicker-3.0', '~> 2.2.0'
 
 end

@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
   - Alamofire (3.4.2)
   - Charts (2.2.5):
     - Charts/Core (= 2.2.5)
@@ -8,6 +9,7 @@ PODS:
   - SwiftDate (3.0.8)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 2.2.0)
   - Alamofire
   - Charts (~> 2.2)
   - ObjectMapper
@@ -15,12 +17,13 @@ DEPENDENCIES:
   - SwiftDate
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
   Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
   SlideMenuControllerSwift: e257221100c39d49edccaaeb0238b55a0c67953a
   SwiftDate: 971f8b9394f664f2226b9c3ab64e801a7291c612
 
-PODFILE CHECKSUM: 4c151d1bb2ce07dc7492bc993afe21894dd504e7
+PODFILE CHECKSUM: 600b7cef86d8fc50d0c6b7d5f4c1bd58627fe644
 
 COCOAPODS: 1.0.1

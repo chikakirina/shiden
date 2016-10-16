@@ -34,6 +34,7 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
     var paybackPlanViewControlelr: UIViewController!
     var registeredNavigationController: UIViewController!
     var contributionNavigationController: UIViewController!
+    var startNavigationController: UIViewController!
     var faqViewController: UIViewController!
     var settingViewController: UIViewController!
     
@@ -55,6 +56,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         paybackPlanViewControlelr = UIStoryboard(name: "Payback", bundle: nil).instantiateInitialViewController()
         contributionNavigationController = UIStoryboard(name: "Contribution", bundle: nil).instantiateInitialViewController()
 
+        startNavigationController = UIStoryboard(name: "Start", bundle: nil).instantiateInitialViewController()
+        
 //        self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
 //        
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -90,6 +93,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
             slideMenuController()?.changeMainViewController(paybackPlanViewControlelr, close: true)
         case .contribution:
             slideMenuController()?.changeMainViewController(contributionNavigationController, close: true)
+        case .logout:
+            slideMenuController()?.changeMainViewController(startNavigationController, close: true)
         default:
             break
 //        case .main:
