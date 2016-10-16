@@ -497,8 +497,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="入金履歴" id="JgK-Tu-KVs">
-                        <barButtonItem key="leftBarButtonItem" title="＝" id="a7a-wI-61Q">
-                            <color key="tintColor" red="1" green="0.99607843139999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu.png" id="a7a-wI-61Q">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tapMenuButton:" destination="Z41-6F-ZgI" id="52L-Lk-uo0"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="月変更" id="YIE-GW-smn">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -537,4 +540,7 @@
             <point key="canvasLocation" x="372" y="-334"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_menu.png" width="24" height="24"/>
+    </resources>
 </document>

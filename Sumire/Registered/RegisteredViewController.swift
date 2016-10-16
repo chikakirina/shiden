@@ -13,6 +13,10 @@ class RegisteredViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var models: [RegisteredCardPersonViewModel] = []
     
+    @IBAction func tapMenuButton(sender: UIBarButtonItem) {
+        slideMenuController()?.openLeft()
+    }
+    
     override func viewDidLoad() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         navigationController?.navigationBar.shadowImage = UIImage()

@@ -34,7 +34,6 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
     var paybackPlanViewControlelr: UIViewController!
     var registeredNavigationController: UIViewController!
     var contributionNavigationController: UIViewController!
-    var startNavigationController: UIViewController!
     var faqViewController: UIViewController!
     var settingViewController: UIViewController!
     
@@ -59,7 +58,7 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         paybackPlanViewControlelr = UIStoryboard(name: "Payback", bundle: nil).instantiateInitialViewController()
         contributionNavigationController = UIStoryboard(name: "Contribution", bundle: nil).instantiateInitialViewController()
 
-        startNavigationController = UIStoryboard(name: "Start", bundle: nil).instantiateInitialViewController()
+        settingViewController = UIStoryboard(name: "Start", bundle: nil).instantiateInitialViewController()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -80,8 +79,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
             slideMenuController()?.changeMainViewController(paybackPlanViewControlelr, close: true)
         case .contribution:
             slideMenuController()?.changeMainViewController(contributionNavigationController, close: true)
-        case .logout:
-            slideMenuController()?.changeMainViewController(startNavigationController, close: true)
+        case .setting:
+            slideMenuController()?.changeMainViewController(settingViewController, close: true)
         default:
             break
         }

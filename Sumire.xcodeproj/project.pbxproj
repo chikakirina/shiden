@@ -51,6 +51,7 @@
 		270FD58C1DB3325600687176 /* icon_arrow_under@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270FD58B1DB3325600687176 /* icon_arrow_under@2x.png */; };
 		270FD5901DB337C500687176 /* BurdenSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD58F1DB337C500687176 /* BurdenSettingViewController.swift */; };
 		270FD5921DB341A700687176 /* SharedInstanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FD5911DB341A700687176 /* SharedInstanceManager.swift */; };
+		270FD5941DB34D8B00687176 /* icon_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270FD5931DB34D8B00687176 /* icon_menu@2x.png */; };
 		7692E697B7838F6146BF0951 /* Pods_Sumire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		270FD58B1DB3325600687176 /* icon_arrow_under@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_under@2x.png"; sourceTree = "<group>"; };
 		270FD58F1DB337C500687176 /* BurdenSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurdenSettingViewController.swift; sourceTree = "<group>"; };
 		270FD5911DB341A700687176 /* SharedInstanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedInstanceManager.swift; sourceTree = "<group>"; };
+		270FD5931DB34D8B00687176 /* icon_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_menu@2x.png"; sourceTree = "<group>"; };
 		355CE4F7F03043DFE65D6E58 /* Pods_Sumire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sumire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE45D97FE0945BC425A4A6 /* Pods-Sumire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.release.xcconfig"; sourceTree = "<group>"; };
 		F672BC6891D167EDB7F8E5A0 /* Pods-Sumire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumire/Pods-Sumire.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				0712D86F1DAFC0B3000953B0 /* mana.png */,
 				270FD58B1DB3325600687176 /* icon_arrow_under@2x.png */,
+				270FD5931DB34D8B00687176 /* icon_menu@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				270FD58C1DB3325600687176 /* icon_arrow_under@2x.png in Resources */,
 				0712D8701DAFC0B3000953B0 /* mana.png in Resources */,
 				0712D8621DAFACA2000953B0 /* LaunchScreen.storyboard in Resources */,
+				270FD5941DB34D8B00687176 /* icon_menu@2x.png in Resources */,
 				07EBC8DE1DB0FBF500C29348 /* Registered.storyboard in Resources */,
 				270FD5841DB317F700687176 /* Start.storyboard in Resources */,
 				073AC9001DB11703007EF051 /* Transactions.storyboard in Resources */,

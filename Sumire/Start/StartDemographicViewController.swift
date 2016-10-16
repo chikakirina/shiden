@@ -13,11 +13,16 @@ import SwiftDate
 class StartDemographicViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var amountLabel: UILabel!
     
     var selectedDate: NSDate?
     var selectedIsNationalOrPublic: Bool?
     var selectedIsHomeCommute: Bool?
     var settings = ["生年月日","進学区分","通学"]
+    
+    @IBAction func tapMenuButton(sender: UIBarButtonItem) {
+        slideMenuController()?.openLeft()
+    }
     
     override func viewDidLoad() {
         tableView.tableFooterView = UIView()
@@ -27,13 +32,35 @@ class StartDemographicViewController: UIViewController {
         performSegueWithIdentifier("SettingNext", sender: nil)
     }
     
+    private func reloadView() {
+        tableView.reloadData()
+        
+        guard let _ = selectedDate, isNational = selectedIsNationalOrPublic, isHome = selectedIsHomeCommute else {
+            amountLabel.text = "- 円"
+            return
+        }
+        
+        switch (isNational, isHome) {
+        case (true, true):
+            amountLabel.text = "5,000,000 円"
+        case (false, true):
+            amountLabel.text = "7,000,000 円"
+        case (true, false):
+            amountLabel.text = "10,000,000 円"
+        case (false, false):
+            amountLabel.text = "12,000,000 円"
+        default:
+            break
+        }
+    }
+    
     private func selectDate() {
         let preDate = selectedDate ?? NSDate.init(year: 2010, month: 1, day: 1)
         
         ActionSheetDatePicker.showPickerWithTitle("生年月日の選択", datePickerMode: .Date, selectedDate: preDate, doneBlock: { (picker, date, value) in
                 print("done date:\(date)")
                 self.selectedDate = date as? NSDate
-                self.tableView.reloadData()
+                self.reloadView()
             }, cancelBlock: { picker in
                 print("cancel")
             }, origin: view)
@@ -45,7 +72,7 @@ class StartDemographicViewController: UIViewController {
         ActionSheetStringPicker.showPickerWithTitle("進学区分の選択", rows: ["国公立","私立"], initialSelection: preSelect, doneBlock: { (picker, index, value) in
                 print("done index:\(index)")
                 self.selectedIsNationalOrPublic = index == 0 ? true : false
-                self.tableView.reloadData()
+                self.reloadView()
             }, cancelBlock: { picker in
                 print("cancel")
             }, origin: view)
@@ -57,7 +84,7 @@ class StartDemographicViewController: UIViewController {
         ActionSheetStringPicker.showPickerWithTitle("通学の選択", rows: ["自宅","下宿"], initialSelection: preSelect, doneBlock: { (picker, index, value) in
                 print("done index:\(index)")
                 self.selectedIsHomeCommute = index == 0 ? true : false
-                self.tableView.reloadData()
+                self.reloadView()
             }, cancelBlock: { picker in
                 print("cancel")
             }, origin: view)

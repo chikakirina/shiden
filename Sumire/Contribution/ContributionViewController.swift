@@ -12,10 +12,13 @@ import Charts
 
 class ContributionViewController: UITableViewController {
     
-    
     @IBOutlet weak var pieChartView: PieChartView!
     
     private var models: [ContributionCellViewModel] = []
+    
+    @IBAction func tapMenuButton(sender: UIBarButtonItem) {
+        slideMenuController()?.openLeft()
+    }
     
     override func viewDidLoad() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)

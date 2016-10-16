@@ -16,6 +16,10 @@ class HomeViewController: UITableViewController {
     
     private var models: [HistoriesDateModel] = []
     
+    @IBAction func tapMenuButton(sender: UIBarButtonItem) {
+        slideMenuController()?.openLeft()
+    }
+    
     override func viewDidLoad() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         navigationController?.navigationBar.shadowImage = UIImage()

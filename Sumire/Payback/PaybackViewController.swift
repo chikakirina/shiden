@@ -16,6 +16,10 @@ class PaybackViewController: UITableViewController {
     
     private var models: [InfoCellViewModel] = []
     
+    @IBAction func tapMenuButton(sender: UIBarButtonItem) {
+        slideMenuController()?.openLeft()
+    }
+    
     override func viewDidLoad() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         navigationController?.navigationBar.shadowImage = UIImage()

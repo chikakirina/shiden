@@ -124,8 +124,8 @@
                                             <action selector="tapNextButton:" destination="qHj-VT-TPT" eventType="touchUpInside" id="G0x-AK-JkL"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,000,000 円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcu-pO-BBJ">
-                                        <rect key="frame" x="169" y="0.0" width="134.5" height="26.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="- 円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcu-pO-BBJ">
+                                        <rect key="frame" x="169" y="0.0" width="134.5" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -169,8 +169,16 @@
                             <constraint firstAttribute="trailing" secondItem="ml7-iJ-VTe" secondAttribute="trailing" id="zVT-Im-3k4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="設定・育成方針" id="Aup-Aw-LuL"/>
+                    <navigationItem key="navigationItem" title="設定・育成方針" id="Aup-Aw-LuL">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu.png" id="QcA-r6-gfv">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tapMenuButton:" destination="qHj-VT-TPT" id="a0a-Oe-n81"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="amountLabel" destination="Lcu-pO-BBJ" id="UE8-xX-ZzG"/>
                         <outlet property="tableView" destination="8ZB-vr-u2r" id="5Ee-TQ-1xZ"/>
                         <segue destination="cf7-2Z-IsU" kind="show" identifier="SettingNext" id="5n7-Be-kHm"/>
                     </connections>
@@ -418,17 +426,17 @@
                                                             <color key="textColor" red="0.2392156869" green="0.2588235438" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4mR-jb-Tvq">
-                                                            <rect key="frame" x="25" y="204" width="107" height="38.5"/>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4mR-jb-Tvq">
+                                                            <rect key="frame" x="25" y="204" width="122" height="38.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="5,400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIU-m8-GcF">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="39"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15,400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIU-m8-GcF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="39"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                                     <color key="textColor" red="0.66666666669999997" green="0.094117647060000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWE-YO-Vt8">
-                                                                    <rect key="frame" x="92" y="20" width="15" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWE-YO-Vt8">
+                                                                    <rect key="frame" x="107" y="20" width="15" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                     <color key="textColor" red="0.66666666669999997" green="0.094117647060000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -452,8 +460,8 @@
                                                                 </mask>
                                                             </variation>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="貯める必要があります。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="NVc-EN-Oa8">
-                                                            <rect key="frame" x="137" y="224" width="138" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="貯める必要があります。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="NVc-EN-Oa8">
+                                                            <rect key="frame" x="152" y="224" width="123" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                             <color key="textColor" red="0.2392156869" green="0.2588235438" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -534,5 +542,6 @@
     </scenes>
     <resources>
         <image name="icon_arrow_under.png" width="10" height="5"/>
+        <image name="icon_menu.png" width="24" height="24"/>
     </resources>
 </document>

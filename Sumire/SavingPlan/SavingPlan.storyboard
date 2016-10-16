@@ -415,13 +415,13 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="目標に必要な月平均貯蓄額" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="doB-9z-00b">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="目標に必要な月平均貯蓄額" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="doB-9z-00b">
                                                     <rect key="frame" x="25" y="82" width="145" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                     <color key="textColor" red="0.2392156869" green="0.2588235438" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-7T-8xV">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-7T-8xV">
                                                     <rect key="frame" x="175" y="77.5" width="95" height="26.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="+4,250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qi-pl-h7j">
@@ -430,7 +430,7 @@
                                                             <color key="textColor" red="0.2392156869" green="0.2588235438" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-Ai-1Hk">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-Ai-1Hk">
                                                             <rect key="frame" x="80" y="8" width="15" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.2392156869" green="0.2588235438" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -882,8 +882,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="貯蓄目標" id="oxa-ks-pDg">
-                        <barButtonItem key="leftBarButtonItem" title="＝" id="y5e-oy-e0e">
-                            <color key="tintColor" red="1" green="0.99607843139999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu.png" id="y5e-oy-e0e">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tapMenuButton:" destination="gRG-sN-O3X" id="siW-kW-DuR"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="条件変更" id="Nja-5M-3fM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -925,4 +928,7 @@
             <point key="canvasLocation" x="369" y="-334"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_menu.png" width="24" height="24"/>
+    </resources>
 </document>

@@ -439,8 +439,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SUMIRE" id="weN-1h-Jsq">
-                        <barButtonItem key="leftBarButtonItem" title="＝" id="7sz-Ua-p2Q">
-                            <color key="tintColor" red="1" green="0.99607843139999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu.png" id="7sz-Ua-p2Q">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tapMenuButton:" destination="5bd-KM-Kdw" id="9H1-f1-pz5"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -480,6 +483,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_menu.png" width="24" height="24"/>
         <image name="mana.png" width="200" height="200"/>
     </resources>
 </document>
