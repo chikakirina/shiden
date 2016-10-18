@@ -11,7 +11,7 @@ import Foundation
 public extension Int {
     func toNumberFormatString() -> String {
         var value = abs(self)
-        if value > 999999999999 {
+        if value > Int.max {
             value = 0
         }
         let formatter = NSNumberFormatter()
