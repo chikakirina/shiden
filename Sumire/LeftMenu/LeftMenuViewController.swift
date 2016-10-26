@@ -8,16 +8,17 @@
 
 import UIKit
 
-enum LeftMenu: Int {
-    case home = 0
-    case transactions
-    case savingPlan
-    case paybackPlan
-    case registeredInfo
-    case contribution
-    case faq
-    case setting
-    case logout
+enum LeftMenu: String {
+    case home = "Home"
+    case transactions = "入金履歴"
+    case progressTheMonth = "今月の貯蓄"
+    case savingPlan = "貯蓄目標"
+    case paybackPlan = "将来の返済計画"
+    case registeredInfo = "イオン銀行・WAONカード"
+    case contribution = "貢献度"
+    case faq = "FAQ"
+    case setting = "設定"
+    case logout = "ログアウト"
 }
 
 protocol LeftMenuProtocol : class {
@@ -27,9 +28,10 @@ protocol LeftMenuProtocol : class {
 class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["ホーム", "入金履歴", "貯蓄目標", "将来の返済計画", "イオン銀行・WAONカード","貢献度","FAQ","設定","ログアウト"]
+    var menus: [LeftMenu] = [.home, .transactions, .progressTheMonth, .savingPlan, .paybackPlan, .registeredInfo, .contribution, .faq, .setting, .logout]
     var homeViewController: UIViewController!
     var transactionsViewController: UIViewController!
+    var progressMonthViewController: UIViewController!
     var savingPlanViewController: UIViewController!
     var paybackPlanViewControlelr: UIViewController!
     var registeredNavigationController: UIViewController!
@@ -54,6 +56,7 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
         
         registeredNavigationController = UIStoryboard(name: "Registered", bundle: nil).instantiateInitialViewController()
         transactionsViewController = UIStoryboard(name: "Transactions", bundle: nil).instantiateInitialViewController()
+        progressMonthViewController = UIStoryboard(name: "ProgressMonth", bundle: nil).instantiateInitialViewController()
         savingPlanViewController = UIStoryboard(name: "SavingPlan", bundle: nil).instantiateInitialViewController()
         paybackPlanViewControlelr = UIStoryboard(name: "Payback", bundle: nil).instantiateInitialViewController()
         contributionNavigationController = UIStoryboard(name: "Contribution", bundle: nil).instantiateInitialViewController()
@@ -81,6 +84,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
             slideMenuController()?.changeMainViewController(contributionNavigationController, close: true)
         case .setting:
             slideMenuController()?.changeMainViewController(settingViewController, close: true)
+        case .progressTheMonth:
+            slideMenuController()?.changeMainViewController(progressMonthViewController, close: true)
         default:
             break
         }
@@ -94,9 +99,8 @@ class LeftMenuViewController : UIViewController, LeftMenuProtocol {
 extension LeftMenuViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let menu = LeftMenu(rawValue: indexPath.row) {
-            self.changeViewController(menu)
-        }
+        let menu = menus[indexPath.row]
+        self.changeViewController(menu)
     }
 }
 
@@ -108,8 +112,8 @@ extension LeftMenuViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuCell", forIndexPath: indexPath) as! LeftMenuCell
-        let selected = LeftMenu(rawValue: indexPath.row) == selectedMenu
-        cell.setup(name: menus[indexPath.row], isSelected: selected)
+        let selected = menus[indexPath.row] == selectedMenu
+        cell.setup(name: menus[indexPath.row].rawValue, isSelected: selected)
         
         if menus.count - 1 == indexPath.row {
             cell.setRedColor()

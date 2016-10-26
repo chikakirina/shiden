@@ -31,12 +31,14 @@ public struct ContributionCellViewModel {
             return color(red: 170, green: 24, blue: 122)
         case 4:
             return color(red: 103, green: 190, blue: 78)
+        case 5:
+            return color(red: 0, green: 0, blue: 0, alpha: 0) // Clear Color
         default:
             return color(red: 26, green: 158, blue: 214)
         }
     }
     
-    private static func color(red red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+    private static func color(red red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1) -> UIColor {
         return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1)
     }
 }
