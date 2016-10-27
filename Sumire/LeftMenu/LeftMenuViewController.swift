@@ -11,7 +11,7 @@ import UIKit
 enum LeftMenu: String {
     case home = "Home"
     case transactions = "入金履歴"
-    case progressTheMonth = "今月の貯蓄"
+    case progressTheMonth = "今月の累計イオン利用額"
     case savingPlan = "貯蓄目標"
     case paybackPlan = "将来の返済計画"
     case registeredInfo = "イオン銀行・WAONカード"

@@ -32,7 +32,7 @@ public struct ContributionCellViewModel {
         case 4:
             return color(red: 103, green: 190, blue: 78)
         case 5:
-            return color(red: 0, green: 0, blue: 0, alpha: 0) // Clear Color
+            return color(red: 230, green: 69, blue: 69)
         default:
             return color(red: 26, green: 158, blue: 214)
         }
